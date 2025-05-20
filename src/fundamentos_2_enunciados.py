@@ -6,17 +6,19 @@
 # ------------------------------
 
 # ✨ Ejercicio 1: Lista de la compra
-# Crea una lista con al menos 5 elementos. Muestra el primero y el último elemento.
+# Crea una lista con al menos 5 elementos.
+# Muestra el primero y el último elemento.
 
 print("-----------------------------------")
 print("✨ Ejercicio 1: Lista de la compra:")
 print("-----------------------------------")
 
 bascket = ["tomate", "patata", "atún", "jamón", "pan"]
-print(bascket[0], bascket[-1]);
+print(bascket[0], bascket[-1])
 
 # ✨ Ejercicio 2: Añadir y eliminar
-# Añade un nuevo elemento a la lista anterior y elimina otro. Imprime la lista actualizada.
+# Añade un nuevo elemento a la lista anterior
+# y elimina otro. Imprime la lista actualizada.
 
 print("----------------------------------")
 print("✨ Ejercicio 2: Añadir y eliminar:")
@@ -46,7 +48,7 @@ print("----------------------------")
 print("✨ Ejercicio 4: Coordenadas:")
 print("----------------------------")
 
-coord = (43.4028,-4.7522)
+coord = (43.4028, -4.7522)
 print(coord)
 
 # ✨ Ejercicio 5: Elemento fijo
@@ -55,7 +57,7 @@ print("------------------------------")
 print("✨ Ejercicio 5: Elemento fijo:")
 print("------------------------------")
 
-cosas = (1,2,"3")
+cosas = (1, 2, "3")
 try:
     cosas[-1] = 3
 except Exception as e:
@@ -106,7 +108,8 @@ for k, v in user.items():
 # ------------------------------
 
 # ✨ Ejercicio 9: Eliminar duplicados
-# A partir de una lista con nombres repetidos, crea un set para mostrar solo los nombres únicos.
+# A partir de una lista con nombres repetidos,
+# crea un set para mostrar solo los nombres únicos.
 
 print("------------------------------------")
 print("✨ Ejercicio 9: Eliminar duplicados:")
@@ -123,7 +126,7 @@ print("✨ Ejercicio 10: Operaciones de conjuntos:")
 print("------------------------------------------")
 
 A = {1, 2, 3, 5, 6, 7, 8, 9}
-B = {1, 3, 4, 7 }
+B = {1, 3, 4, 7}
 
 print(A.difference(B))
 # ------------------------------
@@ -131,7 +134,8 @@ print(A.difference(B))
 # ------------------------------
 
 # 🌟 Ejercicio Extra: Mezcla total
-# Crea un diccionario donde cada clave sea el nombre de una persona y el valor una lista de hobbies.
+# Crea un diccionario donde cada clave sea el nombre de una persona
+# y el valor una lista de hobbies.
 # Añade un nuevo hobby a una persona y muestra todos los hobbies de otra.
 
 print("---------------------------------")
@@ -139,7 +143,7 @@ print("✨ Ejercicio Extra: Mezcla total:")
 print("---------------------------------")
 
 hobbies = {
-    "Ana" : ["Programar", "Ver tele", "Molestar a Marcos"],
+    "Ana": ["Programar", "Ver tele", "Molestar a Marcos"],
     "Paco": ["Jugar", "Tirarse por un puente"],
     "Nerea": ["Bailar", "Dibujar"]
 }

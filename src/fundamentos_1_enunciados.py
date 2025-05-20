@@ -5,7 +5,8 @@
 # ------------------------------
 
 # ✨ Ejercicio 1: ¿Qué tipo es?
-# Declara las siguientes variables y usa type() para imprimir qué tipo de dato es cada una:
+# Declara las siguientes variables y usa type()
+# para imprimir qué tipo de dato es cada una:
 a = "Hola"
 b = 25
 c = 3.14
@@ -153,10 +154,10 @@ try:
 except ValueError:
     try:
         if type(float(x)) == float:
-            print ("► Es un decimal")
+            print("► Es un decimal")
     except ValueError:
         if type(str(x)) == str:
-            print ("► Es una cadena")
+            print("► Es una cadena")
         else:
             print("No sé qué es esto 😵‍💫")
 
@@ -171,20 +172,29 @@ except ValueError:
 # 3. Multiplicar
 # 4. Dividir
 # Según la opción elegida, haz la operación y muestra el resultado.
-# Bonus: si elige dividir y el segundo número es 0, muestra “No se puede dividir por cero”.
+# Bonus: si elige dividir y el segundo número es 0,
+# muestra “No se puede dividir por cero”.
 
 print("--------------------------------------")
 print("✨ Ejercicio 10: Calculadora con menú:")
 print("--------------------------------------")
 
+
 def sumar(n1, n2):
     return n1 + n2
-def restar (n1, n2):
+
+
+def restar(n1, n2):
     return n1 - n2
+
+
 def mult(n1, n2):
     return n1 * n2
+
+
 def div(n1, n2):
-    return n1/n2
+    return n1 / n2
+
 
 try:
     x = float(input("Introdúce el primer número: "))
@@ -201,10 +211,10 @@ try:
         4: div(x, y)
     }.get(menu, "❌ Opción no contemplada")
 
-    if 1<= menu <= 4:
+    if 1 <= menu <= 4:
         print(f"Resultado: {result}")
     else:
-        print (result)
+        print(result)
 except Exception as e:
     print(f"\033[91mParámetro no válido: {e}\033[0m")
 
@@ -240,5 +250,5 @@ try:
             break
     else:
         print("❌ Opción no contemplada")
-except:
-    print(f"\033[91mDebe ser un número entero\033[0m")
+except Exception as e:
+    print(f"\033[91mDebe ser un número entero: {e}\033[0m")

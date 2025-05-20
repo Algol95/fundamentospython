@@ -29,6 +29,7 @@
 
 contacts = []
 
+
 def add(name, age, city):
     newContact = {
         "name": name,
@@ -36,10 +37,14 @@ def add(name, age, city):
         "city": city
     }
     contacts.append(newContact)
-    print(f"-----------------------------------\n✔ El nuevo contacto ha sido agregado:\n{newContact}\n-----------------------------------")
+    print(f"-----------------------------------\n\
+          ✔ El nuevo contacto ha sido agregado:\
+          \n{newContact}\n-----------------------------------")
 
-add("Ana",44,"Avilés")
-add("Javier",34,"Mieres")
+
+add("Ana", 44, "Avilés")
+add("Javier", 34, "Mieres")
+
 
 def newContact():
     try:
@@ -50,29 +55,38 @@ def newContact():
     except Exception as e:
         print(f"❌ Valor introducido incorrecto: {e}")
 
-def allContacts(): 
-    print(f"---------------------\nListado de contactos:\n---------------------")
+
+def allContacts():
+    print("---------------------\nListado de contactos:\n\
+          ---------------------")
     for c in contacts:
         print("=============")
         for k, v in c.items():
-            print (f"{k}: {v}")
+            print(f"{k}: {v}")
         print("=============")
+
 
 def findByName():
     try:
-        name = input("\n→Indica el nombre a buscar: ")    
+        name = input("\n→Indica el nombre a buscar: ")
         for c in contacts:
             if c["name"] == name:
-                return print(f"----------------------\n✔ Contacto encontrado:\n----------------------\n{c}")
+                return print(f"----------------------\n\
+                             ✔ Contacto encontrado:\n\
+                             ----------------------\n{c}")
         else:
             print("\n❌ Contacto no encontrado")
     except Exception as e:
         print(f"❌ Valor introducido incorrecto: {e}")
+
+
 print("-----------------------------")
 print("✨ Reto: Gestor de contactos:")
 print("-----------------------------")
 while True:
-    print("--------------------\n¿Qué quieres hacer?\n-------------------\n1. Añadir contacto\n2. Ver contactos\n3. Buscar por nombre\n4. Salir\n")
+    print("--------------------\n¿Qué quieres hacer?\n-------------------\n\
+1. Añadir contacto\n2. Ver contactos\n\
+3. Buscar por nombre\n4. Salir\n")
     try:
         index = int(input("► Indíque un índice numérico: "))
         menu = {
@@ -87,5 +101,5 @@ while True:
             break
         else:
             print("❌ Opción no válida.")
-    except:
-        print(f"\033[91m\n‼ Debe ser un número entero\033[0m")
+    except Exception as e:
+        print(f"\033[91m\n‼ Debe ser un número entero: {e}\033[0m")
